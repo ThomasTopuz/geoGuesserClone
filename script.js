@@ -235,5 +235,5 @@ function stopTimer() {
   clearInterval(int);
 }
 
-window.initialize = () => initialize(coordinateSet.giubiasco);
+window.initialize = () => initialize(coordinateSet.sevran);
 int = setInterval(displayTimer, 10);

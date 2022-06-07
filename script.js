@@ -112,9 +112,7 @@ const handlePositionGuess = (e) => {
 
     const timeInMinutes =
       milliseconds / 60000 + seconds / 60 + minutes + hours * 60;
-    let points = Math.floor(
-      (-1 / 10) * distanceInMeters + timeInMinutes * 1000 + 1010
-    );
+    let points = Math.floor(-1 * (distanceInMeters + timeInMinutes) + 1000);
 
     if (points < 0) points = 0;
     document.getElementById("result").innerHTML =
@@ -235,5 +233,5 @@ function stopTimer() {
   clearInterval(int);
 }
 
-window.initialize = () => initialize(coordinateSet.sevran);
+window.initialize = () => initialize(coordinateSet.giubiasco);
 int = setInterval(displayTimer, 10);
